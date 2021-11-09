@@ -9,11 +9,11 @@ const ViewSchema = new mongoose.Schema({
     {
       nameEp: {
         type: String,
-        required: true
+        required: true,
       },
       time: {
         type: String,
-        required: true
+        required: true,
       },
       thumbnail: {
         type: String,
@@ -22,5 +22,18 @@ const ViewSchema = new mongoose.Schema({
     },
   ],
 });
+
+const dbd = [
+  {
+    name: "",
+    episodes: [
+      {
+        nameEp: "1. ",
+        time: "24 min",
+        thumbnail: "",
+      },
+    ],
+  },
+];
 
 module.exports = mongoose.model("Season", ViewSchema);
