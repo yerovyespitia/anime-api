@@ -35,9 +35,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Season.insertMany([
-// ])
-//   .then(() => console.log("Data inserted"))
-//   .catch((err) => console.log(err));
-
 module.exports = router;

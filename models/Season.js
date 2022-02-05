@@ -14,6 +14,7 @@ const ViewSchema = new mongoose.Schema({
       time: {
         type: String,
         required: true,
+        default: "24 min"
       },
       thumbnail: {
         type: String,
@@ -22,18 +23,5 @@ const ViewSchema = new mongoose.Schema({
     },
   ],
 });
-
-const dbd = [
-  {
-    name: "",
-    episodes: [
-      {
-        nameEp: "1. ",
-        time: "24 min",
-        thumbnail: "",
-      },
-    ],
-  },
-];
 
 module.exports = mongoose.model("Season", ViewSchema);
