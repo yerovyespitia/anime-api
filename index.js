@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
 const view = require("./routes/view");
-const watch = require("./routes/watch");
 const season = require("./routes/season")
 
 dotenv.config();
@@ -26,7 +25,6 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/api/view", view);
-app.use("/api/watch", watch);
 app.use("/api/season", season);
 
 app.get("/", (req, res) => {
