@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 const ViewSchema = new mongoose.Schema({
   name: {
@@ -14,7 +14,7 @@ const ViewSchema = new mongoose.Schema({
       time: {
         type: String,
         required: true,
-        default: "24 min"
+        default: "24 min",
       },
       thumbnail: {
         type: String,
@@ -22,6 +22,6 @@ const ViewSchema = new mongoose.Schema({
       },
     },
   ],
-});
+})
 
-module.exports = mongoose.model("Season", ViewSchema);
+module.exports = mongoose.model("Season", ViewSchema)

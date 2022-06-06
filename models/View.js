@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 const ViewSchema = new mongoose.Schema({
   name: {
@@ -21,6 +21,6 @@ const ViewSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-});
+})
 
-module.exports = mongoose.model("View", ViewSchema);
+module.exports = mongoose.model("View", ViewSchema)
