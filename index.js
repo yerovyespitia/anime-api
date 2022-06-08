@@ -6,17 +6,18 @@ const mongoose = require("mongoose")
 const view = require("./routes/view")
 const season = require("./routes/season")
 
+const cors = require("cors")
+
 dotenv.config()
 app.use(express.json())
 
-const cors = require("cors")
-const corsOptions = {
-  origin: "*",
-  credentials: true,
-  optionSuccessStatus: 200,
-}
-
-app.use(cors(corsOptions))
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+    optionSuccessStatus: 200,
+  })
+)
 
 mongoose
   .connect(process.env.MONGO_URL, {
