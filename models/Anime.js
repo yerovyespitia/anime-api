@@ -11,11 +11,6 @@ const AnimeSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  category: {
-    type: String,
-    enum: ["Populars", "Spring", "Fall", "Winter"],
-    required: true,
-  },
   images: [
     {
       banner: {
@@ -23,11 +18,6 @@ const AnimeSchema = new mongoose.Schema({
       },
       logo: {
         type: String,
-      },
-      thumbnail: {
-        type: String,
-        required: true,
-        unique: true,
       },
     },
   ],

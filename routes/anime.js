@@ -24,9 +24,6 @@ router.get("/:anime", async (req, res) => {
   }
 })
 
-// Find popular ones
-
-
 // Add an anime
 router.post("/", async (req, res) => {
   try {
