@@ -21,19 +21,8 @@ const AnimeSchema = new mongoose.Schema({
       },
     },
   ],
-  num_seasons: {
-    type: Number,
-    default: 1,
-  },
   episodes: [
     {
-      episode: {
-        type: Number,
-        unique: true,
-      },
-      season: {
-        type: Number,
-      },
       title: {
         type: String,
       },
