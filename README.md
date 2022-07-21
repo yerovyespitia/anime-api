@@ -1,7 +1,5 @@
-# Anime Streaming API
+<h2 align="center">Anime API</h2>
 
-## Built With:
-
-* Node.js
-* Express
-* MongoDB & Mongoose
+<p align="center">
+ A RESTful anime streaming API made with Node.js.
+</p>

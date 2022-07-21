@@ -3,14 +3,13 @@ const app = express()
 const dotenv = require("dotenv")
 const mongoose = require("mongoose")
 const cors = require("cors")
+const anime = require("./routes/anime")
 
-const view = require("./routes/view")
-const season = require("./routes/season")
-
-
+// Middlewares
 dotenv.config()
 app.use(express.json())
 
+// Cors
 app.use(
   cors({
     origin: "*",
@@ -19,6 +18,7 @@ app.use(
   })
 )
 
+// Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
@@ -26,13 +26,13 @@ mongoose
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err))
 
-app.use("/api/view", view)
-app.use("/api/season", season)
-
+// Routes
+app.use("/api/anime", anime)
 app.get("/", (req, res) => {
-  res.send("API")
+  res.send("Anime Api Running")
 })
 
-app.listen(process.env.PORT || 4000, () => {
-  console.log("Server running on port 4000")
+// Listen to server
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Server running on port 5000")
 })
