@@ -3,13 +3,9 @@ const mongoose = require("mongoose")
 const AnimeSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
-    unique: true,
   },
   synopsis: {
     type: String,
-    required: true,
-    unique: true,
   },
   images: [
     {
@@ -28,7 +24,6 @@ const AnimeSchema = new mongoose.Schema({
       },
       thumbnail: {
         type: String,
-        unique: true,
       },
     },
   ],

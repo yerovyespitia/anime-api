@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 // Find an anime
 router.get("/:anime", async (req, res) => {
   try {
-    const anime = await Anime.findOne({ name: req.params.anime })
+    const anime = await Anime.findOne({ title: req.params.anime })
     if (!anime) res.status(400).json("This anime does not exist!")
     res.status(200).json(anime)
   } catch (err) {
