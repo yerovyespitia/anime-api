@@ -15,6 +15,9 @@ const AnimeSchema = new mongoose.Schema({
       logo: {
         type: String,
       },
+      thumbnail: {
+        type: String,
+      },
     },
   ],
   episodes: [
